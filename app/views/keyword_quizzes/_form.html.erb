@@ -1,0 +1,27 @@
+<%= form_for(keyword_quiz) do |f| %>
+  <% if keyword_quiz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(keyword_quiz.errors.count, "error") %> prohibited this keyword_quiz from being saved:</h2>
+
+      <ul>
+      <% keyword_quiz.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :keyword_id %>
+    <%= f.text_field :keyword_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quiz_id %>
+    <%= f.text_field :quiz_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

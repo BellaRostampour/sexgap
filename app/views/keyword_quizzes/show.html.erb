@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Keyword:</strong>
+  <%= @keyword_quiz.keyword %>
+</p>
+
+<p>
+  <strong>Quiz:</strong>
+  <%= @keyword_quiz.quiz %>
+</p>
+
+<%= link_to 'Edit', edit_keyword_quiz_path(@keyword_quiz) %> |
+<%= link_to 'Back', keyword_quizzes_path %>
